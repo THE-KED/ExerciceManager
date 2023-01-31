@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=!, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+       <div class="sidebar-header">
+        <h3 class="brand">
+           
+            <span >Mathematiques</span ><span th:text="${account.user.Name}">
+        </h3>
+        
+        <label for="sidebar-toggle" class="ti-menu-alt"></label>
+       </div>
+       <div class="sidebar-menu">
+        <ul>
+           <li>	
+          		<a th:href="@{/ExoManager/home}">
+                    <span class="ti-home"></span>
+                    <span> Acceuil</span>
+                </a>
+            </li>
+                      
+            <li>
+                <a th:href="@{/ExoManager/eleve}">
+                    <span class="ti-clipboard"></span>
+                    <span>eleve</span>
+                </a></li>
+            <li>
+				<a href="#">
+                    <span class="ti-user"></span>
+                    <span>professeur</span>
+                </a>
+            </li>
+
+            <li>
+				<a th:href="@{/ExoManager/moderateur}">
+                    <span class="ti-control-pause"></span>
+                    <span>moderateur</span>
+                </a>
+            </li>
+
+        </ul>
+       </div>
+    </div>
+       <div class="main-content">
+        <header>
+            <form class="search-wrapper">
+                <button type="submit"><span class="ti-search"></span></button>
+                <input type="search" placeholder="search">
+            </form>
+            <div class="bu"><button onclick="document.getElementById('id01').style.display='block'">importer</button></div>
+        </header>
+        <main>
+            <div class="activity-card">
+               
+               
+                <center><h1>Exo recu</h1></center>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                               
+                                <th>titre exo</th>
+                                <th>date envoie</th>
+                                <th>date reception</th>
+                                <th>corrige</th>
+                                <th>obtenir ficier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                               
+                                <td>fonction</td>
+                                <td>03/01/2023</td>
+                                <td>23/01/2023</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>telecharger</button></center></td>
+                           </tr>
+                           <tr>
+                               
+                                <td>fonction</td>
+                                <td>03/01/2023</td>
+                                <td>23/01/2023</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>telecharger</button></center></td>
+                            </tr>
+                           <tr>
+                                <td>fonction</td>
+                                <td>03/01/2023</td>
+                                <td>23/01/2023</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>telecharger</button></center></td>
+                           </tr>
+                           <tr>
+                                <td>fonction</td>
+                                <td>03/01/2023</td>
+                                <td>23/01/2023</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>telecharger</button></center></td>
+                           </tr>
+                           <tr>
+                                <td>fonction</td>
+                                <td>03/01/2023</td>
+                                <td>23/01/2023</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>telecharger</button></center></td>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+            <!--section exo rejete-->
+
+            <div class="activity-card" style="padding-top: 5rem;">
+                <center><h1 style="padding-bottom: 3rem;">Exo corrigés (importés)</h1></center>
+                <div class="table-responsive">
+                    <table>
+                        <thead style="background: red;">
+                            <tr>
+                               
+                                <th>titre exo</th>
+                                <th>fichier pdf</th>
+                                <th>envoie correction</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                               
+                                <td>fonction</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>envoyer</button></center></td>
+                           </tr>
+                           <tr>
+                               
+                                <td>fonction</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>envoyer</button></center></td>
+                            </tr>
+                           <tr>
+                                <td>fonction</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>envoyer</button></center></td>
+                           </tr>
+                           <tr>
+                                <td>fonction</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>envoyer</button></center></td>
+                           </tr>
+                           <tr>
+                                <td>fonction</td>
+                                <td>fichier pdf</td>
+                                <td><center><button>envoyer</button></center></td>
+                           </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+
+            <div id="id01" class="modal">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+                <form class="modal-content" action="">
+                  <div class="container">
+                    
+                    <label for="titre"><b>titre exo</b></label>
+                    <input type="text" placeholder="Entrer le titre de votre exercice" name="telephone" required>
+              
+                    <label for="file"><b>importer votre fichier</b></label>
+                    <input type="file" placeholder="Importer votre fichier" name="nom" required>
+    
+                    
+                    <div class="clearfix">
+                      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">annuler</button>
+                      <button type="submit" class="signup">enregistre</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+        </main>
+       </div>
+       <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+       </script>
+    
+       </div>
+   
+    
+</body>
+</html>

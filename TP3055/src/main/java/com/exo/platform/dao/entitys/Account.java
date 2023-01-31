@@ -17,8 +17,8 @@ public class Account {
 	@jakarta.persistence.Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long Id;
-	private String Login;
-	private String Pass;
+	public String Login;
+	public String Pass;
 	
 	@OneToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
 	private User user;
@@ -28,6 +28,7 @@ public class Account {
 
 	public Account() {
 		super();
+		this.user = new User();
 		// TODO Auto-generated constructor stub
 	}
 

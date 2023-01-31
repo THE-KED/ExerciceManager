@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=!, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css}">
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+       <div class="sidebar-header">
+        <h3 class="brand">
+           
+            <span>Mathematiques</span>
+        </h3>
+        
+        <label for="sidebar-toggle" class="ti-menu-alt"></label>
+       </div>
+       <div class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="ti-home"></span>
+                    <span> Acceuil</span>
+                </a>
+            </li>
+                      
+            <li>
+				<a th:href="@{/ExoManager/eleve}">
+                    <span class="ti-clipboard"></span>
+                    <span>eleve</span>
+                </a></li>
+            <li>
+				<a th:href="@{/ExoManager/professeur}">
+                    <span class="ti-user"></span>
+                    <span>professeur</span>
+                </a>
+            </li>
+
+            <li>
+				<a th:href="@{/ExoManager/moderateur}">
+                    <span class="ti-control-pause"></span>
+                    <span>moderateur</span>
+                </a>
+            </li>
+
+        </ul>
+       </div>
+    </div>
+       <div class="main-content">
+        <header>
+            <form class="search-wrapper">
+                <button type="submit"><span class="ti-search"></span></button>
+                <input type="search" placeholder="search">
+            </form>
+         
+               <div class="nav">
+                
+                <nav>
+                    <li class="menu-deroulant">
+                        <a href="#">inscription</a>
+                        <ul class="sous-menu">
+                          <li><a href="#"  onclick="document.getElementById('id01').style.display='block'">moderateur</a></li>
+                          <li><a href="#" onclick="document.getElementById('id02').style.display='block'">enseignant</a></li>
+                         
+                        </ul>
+                      </li>
+                </nav>
+               <nav>
+                <li class="menu-deroulant">
+                    <a href="#">connexion</a>
+                    <ul class="sous-menu">
+                      <li><a href="#"  onclick="document.getElementById('id03').style.display='block'">moderateur</a></li>
+                      <li><a href="#" onclick="document.getElementById('id04').style.display='block'">enseignant</a></li>
+                      <li><a href="#" onclick="document.getElementById('id05').style.display='block'">etudient</a></li>
+                     
+                    </ul>
+                  </li>
+               </nav>
+               </div>
+                  
+                 
+        </header>
+        <main>
+           <form action="" class="form">
+            <h3>inscrivez vous en tant qu'eleve</h3>
+            <input type="text" placeholder="entrer votre nom" required>
+            <input type="text" placeholder="entrer votre prenom" required>
+            <input type="date" placeholder="entrer votre date de naissance" required>
+            <input type="text" placeholder="entrer votre lieu de naissance" required>
+            <input type="email" placeholder="entrer votre email" required>
+            <input type="text" placeholder="entrez le loging" required>
+            <input type="password" placeholder="definir un mot de passe" required>
+            <label for="">selectionner votre classe</label>
+            <select name="" id="">classe
+                <option value="">6eme</option>
+                <option value="">5eme</option>
+                <option value="">4eme</option>
+                <option value="">3eme</option>
+                <option value="">2nde A</option>
+                <option value="">2nde C</option>
+                <option value="">1ere A</option>
+                <option value="">1ere D</option>
+                <option value="">1ere TIC</option>
+                <option value="">1ere C</option>
+                <option value="">Tle A</option>
+                <option value="">Tle D</option>
+                <option value="">Tle TIC</option>
+                <option value="">Tle C</option>
+            </select><br><br>
+            <button type="submit">soumettre</button>
+        </form>
+        </main>
+       </div>
+       <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            <h4>inscrivez vous</h4>
+            <input type="text" placeholder="entrez votre nom" required>
+            <input type="text" placeholder="entrez votre prennom" required>
+            <input type="date" placeholder="entrez votre date de naissance" required>
+            <input type="text" placeholder="entrez votre lieu de naissance" required>
+            <input type="email" placeholder="entrez votre email" required>
+            <input type="text" placeholder="entrez le loging" required>
+            <input type="password" placeholder="definissez un mot de passe" required>
+           
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="#" th:action="@{/ExoManager/professeur}" th:object="${account}" method = "post">
+          <div class="container">
+            
+            <h4>inscrivez vous</h4>
+            <input type="text" placeholder="entrez votre nom" th:field="${account.user.Name}" required >
+            <input type="text" placeholder="entrez votre prennom" th:field="${account.user.FirstName}" required >
+            <input type="date" placeholder="entrez votre date de naissance" th:field="${account.user.BornThe}" required>
+            <input type="text" placeholder="entrez votre lieu de naissance" th:field="${account.user.BornAt}" required >
+            <input type="email" placeholder="entrez votre email" th:field="${account.user.Email}" required>
+            <input type="text" placeholder="entrez le loging" th:field="*{Login}" required/>
+            <input type="password" placeholder="definissez un mot de passe" th:field="*{Pass}" required>
+            <label for="text">it is pleg?</label>
+            <select name="" id=""> 
+                <option value="">oui</option>
+                <option value="">non</option>
+            </select>
+
+            
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div id="id03" class="modal">
+        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            
+            <input type="text" placeholder="Entrer  loging" name="" required>
+      
+            <input type="password" placeholder="entrer mot de passe" name="nom" required>
+
+            
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div id="id04" class="modal">
+        <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            
+            <input type="text" placeholder="Entrer  loging" name="" required>
+      
+            <input type="password" placeholder="entrer mot de passe" name="nom" required>
+
+            
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="id05" class="modal">
+        <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            
+            <input type="text" placeholder="Entrer  loging" name="" required>
+      
+            <input type="password" placeholder="entrer mot de passe" name="nom" required>
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script>
+          // Get the modal
+          var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+
+             // Get the modal
+          var modal = document.getElementById('id02');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+             // Get the modal
+          var modal = document.getElementById('id03');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+             // Get the modal
+          var modal = document.getElementById('id04');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+             // Get the modal
+          var modal = document.getElementById('id05');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+      </script>
+    
+</body>
+</html>

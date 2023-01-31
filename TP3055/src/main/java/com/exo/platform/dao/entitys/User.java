@@ -3,6 +3,8 @@ package com.exo.platform.dao.entitys;
 import java.util.Date;
 
 import org.hibernate.annotations.DynamicUpdate;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,6 +25,7 @@ public class User {
 
 	private String Name;
 	private String FirstName;
+	@DateTimeFormat(iso=ISO.DATE)
 	private Date BornThe;
 	private String BornAt;
 	private String Email;

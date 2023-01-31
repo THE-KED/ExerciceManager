@@ -2,6 +2,9 @@ package com.exo.platform.dao.entitys;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Lob;
@@ -24,6 +27,7 @@ public class Import {
 	private Long Id;
 	@Lob
 	private byte[] File;
+	@DateTimeFormat(iso=ISO.DATE)
 	private Date DateImport;
 	private String Description;
 	private String Titre;
