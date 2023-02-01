@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=!, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Document</title>
+</head>
+<body background="./img/telcha.jpeg">
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+       <div class="sidebar-header">
+        <h3 class="brand">
+           
+            <span>Mathematiques</span>
+        </h3>
+        
+        <label for="sidebar-toggle" class="ti-menu-alt"></label>
+       </div>
+       <div class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="ti-home"></span>
+                    <span> Acceuil</span>
+                </a>
+            </li>
+                      
+            <li>
+                <a href="eleve.html">
+                    <span class="ti-clipboard"></span>
+                    <span>eleve</span>
+                </a></li>
+            <li>
+                <a href="professeur.html">
+                    <span class="ti-user"></span>
+                    <span>professeur</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="moderateur.html">
+                    <span class="ti-control-pause"></span>
+                    <span>moderateur</span>
+                </a>
+            </li>
+
+        </ul>
+       </div>
+    </div>
+       <div class="main-content">
+        <header>
+            <form class="search-wrapper">
+                <button type="submit"><span class="ti-search"></span></button>
+                <input type="search" placeholder="search">
+            </form>
+            <div id="connect">
+              <a href="connecter.html"><button type="submit" class="signin">se connecter</button></a>
+             </div>
+         
+               <!--<div class="nav">
+                
+                <nav>
+                    <li class="menu-deroulant">
+                        <a href="#">inscription</a>
+                        <ul class="sous-menu">
+                          <li><a href="#"  onclick="document.getElementById('id01').style.display='block'">moderateur</a></li>
+                          <li><a href="#" onclick="document.getElementById('id02').style.display='block'">enseignant</a></li>
+                         
+                        </ul>
+                      </li>
+                </nav>
+               <nav>
+                <li class="menu-deroulant">
+                    <a href="#">connexion</a>
+                    <ul class="sous-menu">
+                      <li><a href="#"  onclick="document.getElementById('id03').style.display='block'">moderateur</a></li>
+                      <li><a href="#" onclick="document.getElementById('id04').style.display='block'">enseignant</a></li>
+                      <li><a href="#" onclick="document.getElementById('id05').style.display='block'">etudient</a></li>
+                     
+                    </ul>
+                  </li>
+               </nav>
+               </div>
+                  -->
+                 
+        </header>
+       
+        <div class="mmenu">
+            <h1><u>Bienvenue sur la plate forme de correction des exercices</u></h1>
+            <br><br>
+
+
+           <div>
+            <p>Nous vous proposons des corrections aux exercices de maths  des collèges, des lycées et des niveaux licence (L1,L2,L3) et également des exercices  des classes préparatoires aux grandes écoles sont disponibles via notre site internet.</p>
+            <br><p>Tout est gratuit et à télécharger en format PDF. Alors profitez-en pour réviser et pallier en manque dans un chapitre.</p>
+            <br><p>Nous mettons à votre disposition des enseignants qualifies exercices qui corrigerons vos exercices en fonction de leur disponibilites.</p>
+            <br><p>Les corrections des exercices sont verifies avant d'etre publiees.</p>
+           </div>
+           <br>
+        </div>
+        <hr>
+        <div class="inscription"> 
+          <p> Vous etes nouveau ?
+              <nav class="nav">
+                  <li class="menu-deroulant">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">
+                      Vous inscrire</p>
+                    </button> 
+                      <ul class="sous-menu">
+                        <li><a href="inscripmode.html"  onclick="document.getElementById('id01').style.display='block'" class="mo">Moderateur</a></li>
+                        <li><a href="inscriptionprof.html" onclick="document.getElementById('id02').style.display='block'">Enseignant</a></li>
+                        <li><a href="inscriptionel.html" onclick="document.getElementById('id05').style.display='block'">Etudiant</a></li>
+                      </ul>
+                    </li>
+              </nav>
+        </div>
+        <br>
+        <!--
+           <form action="" class="form">
+            <h3>inscrivez vous en tant qu'eleve</h3>
+            <input type="text" placeholder="entrez votre nom" required>
+            <input type="text" placeholder="entrez votre prennom" required>
+            <input type="date" placeholder="entrez votre date de naissance" required>
+            <input type="text" placeholder="entrez votre lieu de naissance" required>
+            <input type="email" placeholder="entrez votre email" required>
+            <input type="text" placeholder="entrez le loging" required>
+            <input type="password" placeholder="definissez un mot de passe" required>
+            <label for="">selectionner votre classe</label>
+            <select name="" id="">classe
+                <option value="">6eme</option>
+                <option value="">5eme</option>
+                <option value="">4eme</option>
+                <option value="">3eme</option>
+                <option value="">2nde A</option>
+                <option value="">2nde C</option>
+                <option value="">1ere A</option>
+                <option value="">1ere D</option>
+                <option value="">1ere TIC</option>
+                <option value="">1ere C</option>
+                <option value="">Tle A</option>
+                <option value="">Tle D</option>
+                <option value="">Tle TIC</option>
+                <option value="">Tle C</option>
+            </select>
+            <button type="submit">soumettre</button>
+        </form>-->
+        
+       <!--</div>
+       <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            <h4>inscrivez vous en tant que moderateur</h4>
+            <input type="text" placeholder="entrez votre nom" required>
+            <input type="text" placeholder="entrez votre prennom" required>
+            <input type="date" placeholder="entrez votre date de naissance" required>
+            <input type="text" placeholder="entrez votre lieu de naissance" required>
+            <input type="email" placeholder="entrez votre email" required>
+            <input type="text" placeholder="entrez le loging" required>
+            <input type="password" placeholder="definissez un mot de passe" required>
+           
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="id02" class="modal">
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            
+            <h4>inscrivez vous enseignant</h4>
+            <input type="text" placeholder="entrez votre nom" required>
+            <input type="text" placeholder="entrez votre prennom" required>
+            <input type="date" placeholder="entrez votre date de naissance" required>
+            <input type="text" placeholder="entrez votre lieu de naissance" required>
+            <input type="email" placeholder="entrez votre email" required>
+            <input type="text" placeholder="entrez le loging" required>
+            <input type="password" placeholder="definissez un mot de passe" required>
+            <label for="text">it is pleg?</label>
+            <select name="" id=""> 
+                <option value="">oui</option>
+                <option value="">non</option>
+            </select>
+
+            
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div id="id03" class="modal">
+        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            
+            <input type="text" placeholder="Entrer  loging" name="" required>
+      
+            <input type="password" placeholder="entrer mot de passe" name="nom" required>
+
+            
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div id="id04" class="modal">
+        <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            
+            <input type="text" placeholder="Entrer  loging" name="" required>
+      
+            <input type="password" placeholder="entrer mot de passe" name="nom" required>
+
+            
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="id05" class="modal">
+        <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+        <form class="modal-content" action="">
+          <div class="container">
+            
+            <input type="text" placeholder="Entrer  loging" name="" required>
+      
+            <input type="password" placeholder="entrer mot de passe" name="nom" required>
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signup">enregistre</button>
+            </div>
+          </div>
+        </form>
+      </div>-->
+      <script>
+          // Get the modal
+          var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+
+             // Get the modal
+          var modal = document.getElementById('id02');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+             // Get the modal
+          var modal = document.getElementById('id03');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+             // Get the modal
+          var modal = document.getElementById('id04');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+             // Get the modal
+          var modal = document.getElementById('id05');
+        
+        // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+      </script>
+    
+</body>
+</html>

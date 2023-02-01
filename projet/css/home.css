@@ -1,0 +1,550 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap);
+:root{
+    --main-color: rgb(6, 57, 93);
+    --color-dark: rgb(4, 18, 39);
+    --text-grey:  rgb(109, 182, 204);
+    --hauteur-menu: 20px;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+   box-sizing: border-box;
+}
+.sidebar-toggle{
+    display: none;
+}
+
+
+.sidebar{
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: var(--main-color);
+    color:white;
+    overflow-y: auto;
+    transition: width 500ms;
+}
+.sidebar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0rem 1rem;
+}
+.sidebar-menu{
+    padding: 1rem;
+}
+.sidebar li{
+    margin-bottom: 1.2rem;
+   
+}
+.sidebar a{
+    color: white;
+    font-size: 1.2rem;
+}
+
+.sidebar a span:last-child{
+    padding-right: .6rem;
+}
+a:hover{
+    color: rgb(7, 31, 208);
+}
+.sidebar li:hover{
+    
+    background-color: rgb(250, 248, 248);
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: red;
+  
+ 
+}
+button:hover{
+    
+    background-color:blue;
+}
+
+#sidebar-toggle:checked ~ .sidebar {
+    width: 60px;
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header h3 span,
+#sidebar-toggle:checked ~ .sidebar li span:last-child
+{
+        display: none; 
+       
+}
+
+#sidebar-toggle:checked ~ .sidebar .sidebar-header,
+#sidebar-toggle:checked ~ .sidebar li
+{
+      display: flex;
+      justify-content: center;
+       
+}
+
+#sidebar-toggle:checked ~ .main-content {
+    margin-left: 60px;
+}
+
+#sidebar-toggle:checked ~ .main-content header {
+    width: calc(100% - 60px);
+    transition: width 500ms;
+}
+
+.main-content{
+  
+    margin-left: 240px;
+    transition: margin-left 500ms;
+    /*background: url(../img/téléchargement.png);*/
+    background-size: 100%;
+    background-position: fixed;
+}
+.mmenu{
+  width: 50%;
+    padding: 1rem;
+    margin: auto;
+    padding-top: 150px;
+}
+.inscription{
+  width: 50%;
+    padding: 1rem;
+    margin: auto;
+    padding-top: 0px;
+    padding-left: 150px;
+}
+.inscription .nav, .inscription .nav .menu-deroulant .cancelbtn, .inscription+p{
+  display: inline-block;
+}
+
+#connect{
+    margin-right: 100px;
+    
+}
+.nav{
+  padding-left: 220px;
+  margin-top: -25px;
+}
+.ins{
+  color: #2169EC;
+}
+.form .nam{
+width: 95%;
+height: 5%;
+margin-left: 2%;
+background-color: #d9f7e3e3;
+}
+.form .pnam{
+  width: 95%;
+  height: 5%;
+  margin-left: 2%;
+  background-color: #d9f7e3e3;
+}
+.form .dnais{
+  width: 95%;
+  height: 5%;
+  margin-left: 2%;
+  background-color: #d9f7e3e3;
+}
+.form .lnais{
+  width: 95%;
+  height: 5%;
+  margin-left: 2%;
+  background-color: #d9f7e3e3;
+}
+.form .mail{
+  width: 95%;
+  height: 5%;
+  margin-left: 2%;
+  background-color: #d9f7e3e3;
+}
+.form .log{
+  width: 95%;
+  height: 5%;
+  margin-left: 2%;
+  background-color: #d9f7e3e3;
+}
+.form .mdp1{
+  width: 95%;
+  height: 5%;
+  margin-left: 2%;
+  background-color: #d9f7e3e3;
+}
+.bg1{
+  background: url("../img/nete.jpg");
+  background-size: cover;
+  
+}
+.form .plg{
+  display: inline-block ;
+  padding-left: 3.5%;
+  color: #f44336;
+}
+#o{
+  width: 95%;
+  height: 5%;
+  margin-left: 2%;
+  background-color: #d9f7e3e3;
+}
+.form{
+  padding-bottom: 1%;
+  width: 50%;
+    height: 10%;
+    margin-top:3%;
+    margin-left: 25%;
+    background: rgba(19, 18, 22, 0.911);
+    border-radius: 2rem;
+    color: rgb(250, 215, 215);
+    text-transform: capitalize;
+   
+} .sous-menu li{
+  padding-right: 15px;
+  border-radius: 20px;
+  margin-top: -18px;
+}
+
+header{
+   
+    position: fixed;
+    right: 0px;
+    top: 0;
+    z-index: 100;
+    width: calc(100% - 240px);
+    background: rgb(228, 235, 240);
+    height: 60px;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: width 500ms;
+}
+.search-wrapper{
+    display: flex;
+    align-items: center;
+    background: white;
+}
+.search-wrapper button{
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    width: 3rem;
+}
+.main-content input{
+    border: 0;
+    outline: 0;
+    padding: 1rem;
+    height: 30px;
+   
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+}
+.social-icons span,
+.social-icons div{
+    margin-left: 1.2rem;
+}
+.social-icons div{
+    height: 38px;
+    width: 38px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../img/images.jpg);
+    border-radius: 50%;
+}
+span{
+    margin-left: 0.5rem;
+}
+.ti-menu-alt{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+h1{
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+main{
+    margin-top: 60px;
+    min-height: 90vh;
+    padding: 1rem 1rem;
+    width: 100%;
+    background: rgba(10, 10, 10, 0,1);
+    background-size: 100%;
+    background-position: fixed;
+}
+
+.activity-card{
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.activity-card h3{
+    
+    margin-left: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.table-responsive{
+    overflow-x: auto;
+    width: 90%;
+    margin-left: 3rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+
+}
+
+
+ table{
+    border-collapse: collapse;
+    width: 100%;
+   background-color: rgba(205, 198, 198, 0.5);
+   
+}
+ thead{
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+   
+}
+th, td{
+    font-size: 1rem;
+    padding:  0.5rem 0.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+td{
+    font-size: .9rem;
+}
+
+button{
+    width: 7rem;
+    height: 2rem;
+    background:var(--main-color);
+    border-radius: 10px;
+    overflow:  var(--main-color);
+    color: white;
+    border: 0px;   
+  
+}
+.but{
+    float: right;
+    margin-bottom: 1rem;
+    margin-right: 7rem;
+
+}
+
+
+input[type=text], input[type=date], input[type=password], input[type=file], input[type=email] {
+    width: 100%;
+    height: 1rem;
+    padding: 15px;
+    margin: 0.8rem 0rem 0.8rem 0rem;
+    display: inline-block;
+    border: none;
+    background: white;
+  }
+
+  select{
+    width: 100%;
+    border: none;
+    background: white;
+  }
+
+ /* Add a background color when the inputs get focus */
+ input[type=text]:focus, input[type=date]:focus, input[type=file]:focus, input[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    background-color: #f44336;
+  }
+
+  
+  .cancelbtn:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+  }
+  
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .signupbtn {
+    float: left;
+   
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background: url(../img/téléchargement.png) no-repeat;
+    background-size: 100%;
+    padding-top: 50px;
+    margin-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    padding: 70px;
+    align-content: center;
+    background: rgba(7, 6, 6, 0.838);
+    margin-left: 35%; /* 5% from the top, 15% from the bottom and centered */
+    border-radius: 1rem;
+    width: 40%; /* Could be more or less, depending on screen size */
+    color: rgb(148, 17, 17);
+    margin-top: 200px;
+    
+  }
+  .clearfix .signup{
+    margin-left: 20%;
+    margin-top: 10%;
+  }
+  .clearfix .cancelbtn{
+    margin-left: 5%;
+  }
+  .container .login{
+    height: 100%;
+    width: 110%;
+
+  }
+  h3{
+    margin-left: 18%;
+  }
+  .container .mdp{
+    height: 100%;
+    width: 110%;
+
+  }
+  .nav{
+    display: flex;
+    
+  }
+
+  nav > ul {
+    display: flex;
+    text-align: center;
+    height: var(--hauteur-menu);
+  }
+   
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav > ul > li {
+    background-color: white;
+    position: relative;
+    height: 100%;
+   
+  }
+
+  nav > ul > li > a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  nav li a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
+
+
+  .sous-menu {
+    margin-top: var(--hauteur-menu);
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    border-radius: 2px;
+    overflow: hidden;
+    max-height: 0;
+  }
+  
+  .sous-menu > li > a {
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+  }
+  @keyframes apparitionSousMenu {
+    0% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
+      border-top: 3px solid #2169EC;
+    }
+    30% {
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+    100% {
+      max-height: 50em;
+      border-top: 3px solid #2169EC;
+      box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+  }
+
+  .menu-deroulant:hover > .sous-menu {
+    animation: apparitionSousMenu 1s forwards;
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #070000;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+      width: 100%;
+      
+    }
+   
+}

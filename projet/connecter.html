@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=!, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/connect.css">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+       <div class="sidebar-header">
+        <h3 class="brand">
+           
+            <span>Mathematiques</span>
+        </h3>
+        
+        <label for="sidebar-toggle" class="ti-menu-alt"></label>
+       </div>
+       <div class="sidebar-menu">
+        <ul>
+            <li>
+                <a href="#">
+                    <span class="ti-home"></span>
+                    <span> Acceuil</span>
+                </a>
+            </li>
+                      
+            <li>
+                <a href="eleve.html">
+                    <span class="ti-clipboard"></span>
+                    <span>eleve</span>
+                </a></li>
+            <li>
+                <a href="professeur.html">
+                    <span class="ti-user"></span>
+                    <span>professeur</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="moderateur.html">
+                    <span class="ti-control-pause"></span>
+                    <span>moderateur</span>
+                </a>
+            </li>
+
+        </ul>
+       </div>
+    </div>
+       <div class="main-content">
+        <header>
+            <form class="search-wrapper">
+                <button type="submit"><span class="ti-search"></span></button>
+                <input type="search" placeholder="search">
+            </form>
+
+             <div id="id03" class="modal">
+    <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal"><span class="ti-close"></span></span>
+     </header>
+    <form class="modal-content" action="">
+        <h3>Connectez-vous a votre compte !</h3>
+      <div class="container">
+        
+        <input type="text" class="login" placeholder="Entrer  loging" name="" required>
+  
+        <input type="password" class="mdp" placeholder="entrer mot de passe" name="nom" required>
+
+        
+        <div class="clearfix">
+         <a href="home.html"><button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button></a>
+          <button type="submit" class="signup">enregistre</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+      }
+
+       // Get the modal
+    var modal = document.getElementById('id02');
+  
+  // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+      }
+       // Get the modal
+    var modal = document.getElementById('id03');
+  
+  // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+      }
+       // Get the modal
+    var modal = document.getElementById('id04');
+  
+  // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+      }
+       // Get the modal
+    var modal = document.getElementById('id05');
+  
+  // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+      }
+</script>
+
+</body>
+</html>
